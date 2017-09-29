@@ -11,7 +11,7 @@ body {
   grid-template-columns: 1fr 2fr 1fr;
   height: 100vh; }
 
-a {
+a, button {
   text-decoration: none;
   display: inline-block;
   padding: 10px 20px;
@@ -19,7 +19,7 @@ a {
   transition: all 0.3s; }
 
 .search-corner {
-  width: 80%;
+  width: 90%;
   text-align: center;
   grid-column: 2;
   align-self: center;
@@ -40,24 +40,41 @@ a {
       transition: box-shadow 0.3s; }
       .search-corner .search-box input:focus {
         box-shadow: 1px 3px 40px 5px #c4d5ef; }
-    .search-corner .search-box a {
+    .search-corner .search-box button {
       position: absolute;
       right: 0;
       top: 0;
+      border: none;
+      outline: none;
       background-color: #5D9FFF;
+      font-family: 'Raleway';
       font-size: 24px;
       text-align: center;
       color: #fff; }
-      .search-corner .search-box a:hover {
+      .search-corner .search-box button:hover {
         background-color: #1172ff; }
   .search-corner p > a {
-    border: 1px solid #FF4300;
-    color: #FF4300;
+    border: 1px solid #d8440f;
+    color: #d8440f;
     font-weight: 500;
     margin-top: 20px; }
     .search-corner p > a:hover {
-      background-color: #FF4300;
+      background-color: #d8440f;
       color: #fff;
-      box-shadow: 1px 3px 20px 2px #ff837b; }
+      box-shadow: 1px 3px 20px 2px #d8440f;
+      transform: scale(1.1); }
+  .search-corner .search-result > div {
+    background-color: #fff;
+    padding: 10px 30px;
+    margin: 20px;
+    border-radius: 6px;
+    transition: all 0.3s; }
+    .search-corner .search-result > div a {
+      font-size: 20px;
+      font-weight: 500; }
+    .search-corner .search-result > div > p {
+      text-align: justify; }
+    .search-corner .search-result > div:hover {
+      box-shadow: 1px 3px 40px 5px #c4d5ef; }
 
 /*# sourceMappingURL=style.css.map */
