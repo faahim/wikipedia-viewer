@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title>Wikipedia Viewer</title>
-	<!-- <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta charset="utf-8">
@@ -11,11 +10,27 @@
 
 <div class="search-corner">
 	<div class="search-box">
-		<input type="text" name="" placeholder="Search Wikipedia">
-		<a href="#">Search</a>
+		<form action="#">
+			<input type="text" id="query" name="" placeholder="Search Wikipedia">
+			<button type="submit" id="search">Search</button>
+			<!-- <a href="#" id="search">Search</a> -->
+		</form>
 	</div>
 	<p>Or, <br> <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Read A Random Article</a></p>
-</div>
 
+	<div class="search-result r0"></div>
+	<div class="search-result r1"></div>
+	<div class="search-result r2"></div>
+	<div class="search-result r3"></div>
+	<div class="search-result r4"></div>
+	<div class="search-result r5"></div>
+	<div class="search-result r6"></div>
+	<div class="search-result r7"></div>
+	<div class="search-result r8"></div>
+	<div class="search-result r9"></div>
+
+</div>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
