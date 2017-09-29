@@ -12,7 +12,11 @@ body {
   height: 100vh; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.3s; }
 
 .search-corner {
   width: 80%;
@@ -37,15 +41,23 @@ a {
       .search-corner .search-box input:focus {
         box-shadow: 1px 3px 40px 5px #c4d5ef; }
     .search-corner .search-box a {
-      display: inline-block;
       position: absolute;
       right: 0;
       top: 0;
-      font-size: 24px;
-      padding: 10px 20px;
-      border-radius: 30px;
       background-color: #5D9FFF;
+      font-size: 24px;
       text-align: center;
       color: #fff; }
+      .search-corner .search-box a:hover {
+        background-color: #1172ff; }
+  .search-corner p > a {
+    border: 1px solid #FF4300;
+    color: #FF4300;
+    font-weight: 500;
+    margin-top: 20px; }
+    .search-corner p > a:hover {
+      background-color: #FF4300;
+      color: #fff;
+      box-shadow: 1px 3px 20px 2px #ff837b; }
 
 /*# sourceMappingURL=style.css.map */

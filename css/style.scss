@@ -15,6 +15,10 @@ body {
 
 a {
 	text-decoration: none;
+	display: inline-block;
+	padding: 10px 20px;
+	border-radius: 30px;
+	transition: all 0.3s;
 }
 
 .search-corner {
@@ -45,17 +49,28 @@ a {
 			}
 		}
 		a {
-			display: inline-block;
 			position: absolute;
 			// width: 30%;
 			right: 0;
 			top: 0;
-			font-size: 24px;
-			padding: 10px 20px;
-			border-radius: 30px;
 			background-color: #5D9FFF;
+			font-size: 24px;
 			text-align: center;
 			color: #fff;
+			&:hover {
+				background-color: darken(#5D9FFF, 15%);
+			}
+		}
+	}
+	p > a {
+		border: 1px solid #FF4300;
+		color: #FF4300;
+		font-weight: 500;
+		margin-top: 20px;
+		&:hover {
+			background-color: #FF4300;
+			color: #fff;
+			box-shadow: 1px 3px 20px 2px #ff837b;
 		}
 	}
 }
