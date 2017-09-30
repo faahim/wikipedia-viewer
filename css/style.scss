@@ -6,8 +6,8 @@
 
 body {
 	background-color: #f4f4f8;
-	/*font-family: 'Josefin Sans', sans-serif;*/
 	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
 	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
 	height: 100vh;
@@ -30,18 +30,16 @@ a, button {
 	justify-self: center;
 	.search-box {
 		position: relative;
-		margin-bottom: 20px;
+		margin: 30px 0;
 		input {
-			// display: inline-block;
 			width: 100%;
 			border: none;
 			font-family: 'Raleway';
-			/*font-weight: 300;*/
+			font-weight: 300;
 			font-size: 24px;
 			padding: 10px 30px;
 			border-radius: 30px;
 			outline: none;
-			// position: relative;
 			box-shadow: 1px 3px 24px 3px #c4d5ef;
 			transition: box-shadow 0.3s;
 			&:focus {
@@ -50,30 +48,30 @@ a, button {
 		}
 		button {
 			position: absolute;
-			// width: 30%;
 			right: 0;
 			top: 0;
 			border: none;
 			outline: none;
-			background-color: #5D9FFF;
+			background-color: #FF681D;
 			font-family: 'Raleway';
 			font-size: 24px;
+			font-weight: 500;
 			text-align: center;
 			color: #fff;
 			&:hover {
-				background-color: darken(#5D9FFF, 15%);
+				background-color: darken(#FF681D, 15%);
 			}
 		}
 	}
 	p > a {
-		border: 1px solid #d8440f;
-		color: #d8440f;
+		border: 1px solid #FF681D;
+		color: #FF681D;
 		font-weight: 500;
-		margin-top: 20px;
+		margin: 20px 0 50px;
 		&:hover {
-			background-color: #d8440f;
+			background-color: #FF681D;
 			color: #fff;
-			box-shadow: 1px 3px 20px 2px #d8440f;
+			box-shadow: 1px 3px 20px 1px #ff8c54;
 			transform: scale(1.1);
 		}
 	}
@@ -83,12 +81,17 @@ a, button {
 		margin: 20px;
 		border-radius: 6px;
 		transition: all 0.3s;
+		text-align: left;
 		a {
-			font-size: 20px;
-			font-weight: 500;
+			font-size: 18px;
+			font-weight: 700;
+			&:hover{
+				color: #FF681D;
+			}
 		}
 		&>p {
-			text-align: justify;
+			font-size: 15px;
+			font-weight: 500;
 		}
 		&:hover {
 			box-shadow: 1px 3px 40px 5px #c4d5ef;
