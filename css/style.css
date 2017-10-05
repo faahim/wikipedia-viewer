@@ -7,10 +7,9 @@ body {
   background-color: #f4f4f8;
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr auto;
-  height: 100vh; }
+  min-height: 100vh;
+  transition: all 0.3s;
+  position: relative; }
 
 a, button {
   text-decoration: none;
@@ -20,14 +19,13 @@ a, button {
   transition: all 0.3s; }
 
 .search-corner {
-  width: 90%;
+  width: 60%;
+  margin: 0 auto;
   text-align: center;
-  grid-column: 2;
-  align-self: center;
-  justify-self: center; }
+  position: relative;
+  padding-top: 15%; }
   .search-corner .search-box {
-    position: relative;
-    margin: 30px 0; }
+    position: relative; }
     .search-corner .search-box input {
       width: 100%;
       border: none;
@@ -55,16 +53,18 @@ a, button {
       color: #fff; }
       .search-corner .search-box button:hover {
         background-color: #e94d00; }
-  .search-corner p > a {
-    border: 1px solid #FF681D;
-    color: #FF681D;
-    font-weight: 500;
-    margin: 20px 0 50px; }
-    .search-corner p > a:hover {
-      background-color: #FF681D;
-      color: #fff;
-      box-shadow: 1px 3px 20px 1px #ff8c54;
-      transform: scale(1.1); }
+  .search-corner > p {
+    padding-top: 30px; }
+    .search-corner > p a {
+      border: 1px solid #FF681D;
+      color: #FF681D;
+      font-weight: 500;
+      margin: 20px 0 50px; }
+      .search-corner > p a:hover {
+        background-color: #FF681D;
+        color: #fff;
+        box-shadow: 1px 3px 20px 1px #ff8c54;
+        transform: scale(1.1); }
   .search-corner .search-result > div {
     background-color: #fff;
     padding: 10px 20px;
@@ -84,21 +84,70 @@ a, button {
     .search-corner .search-result > div:hover {
       box-shadow: 1px 3px 40px 5px #c4d5ef; }
 
-footer {
-  grid-column: 2;
-  align-self: end;
-  justify-self: center;
+footer .love {
+  padding-top: 30px;
   font-weight: 500;
-  font-size: 14px; }
-  footer a {
+  font-size: 14px;
+  text-align: center; }
+  footer .love a {
     padding: 0 0 20px; }
-    footer a:hover {
+    footer .love a:hover {
       color: #FF681D; }
-  footer .material-icons {
+  footer .love .material-icons {
     color: #FF681D;
     font-size: 16px;
     animation: heartbeat 3s infinite; }
+footer .notice {
+  width: 70%;
+  margin: 0 auto;
+  border: 2px solid #c4d5ef;
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+  font-size: 14px; }
 
+@media (max-width: 576px) {
+  .search-corner {
+    width: 80%;
+    padding-top: 30%; }
+    .search-corner .search-box input, .search-corner .search-box button {
+      font-size: 18px; }
+    .search-corner p > a {
+      font-size: 14px; }
+
+  footer {
+    font-size: 12px; } }
+@media (max-width: 321px) {
+  .search-corner {
+    width: 90%; }
+    .search-corner p > a {
+      font-size: 12px; } }
+@supports (display: grid) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr auto; }
+
+  .search-corner {
+    grid-column: 2;
+    align-self: center;
+    justify-self: center;
+    width: 90%;
+    padding-top: 0; }
+
+  footer {
+    grid-column: 2;
+    align-self: end;
+    justify-self: center; }
+    footer .notice {
+      display: none; }
+
+  @media (max-width: 921px) {
+    body {
+      grid-template-columns: 0.2fr 1fr 0.2fr; } }
+  @media (max-width: 576px) {
+    body {
+      grid-template-columns: 0 1fr 0; } } }
 /*Beating heart animation keyframe*/
 @keyframes heartbeat {
   0% {

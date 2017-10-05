@@ -8,10 +8,9 @@ body {
 	background-color: #f4f4f8;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 500;
-	display: grid;
-	grid-template-columns: 1fr 2fr 1fr;
-	grid-template-rows: 1fr auto;
-	height: 100vh;
+	min-height: 100vh;
+	transition: all 0.3s;
+	position: relative;
 }
 
 a, button {
@@ -23,15 +22,13 @@ a, button {
 }
 
 .search-corner {
-	width: 90%;
-	// margin: 20% auto 0;
+	width: 60%;
+	margin: 0 auto;
 	text-align: center;
-	grid-column: 2;
-	align-self: center;
-	justify-self: center;
+	position: relative;
+	padding-top: 15%;
 	.search-box {
 		position: relative;
-		margin: 30px 0;
 		input {
 			width: 100%;
 			border: none;
@@ -64,16 +61,19 @@ a, button {
 			}
 		}
 	}
-	p > a {
-		border: 1px solid #FF681D;
-		color: #FF681D;
-		font-weight: 500;
-		margin: 20px 0 50px;
-		&:hover {
-			background-color: #FF681D;
-			color: #fff;
-			box-shadow: 1px 3px 20px 1px #ff8c54;
-			transform: scale(1.1);
+	&>p {
+		padding-top: 30px;
+		a {
+			border: 1px solid #FF681D;
+			color: #FF681D;
+			font-weight: 500;
+			margin: 20px 0 50px;
+			&:hover {
+				background-color: #FF681D;
+				color: #fff;
+				box-shadow: 1px 3px 20px 1px #ff8c54;
+				transform: scale(1.1);
+			}
 		}
 	}
 	.search-result > div {
@@ -102,21 +102,100 @@ a, button {
 }
 
 footer {
-	grid-column: 2;
-	align-self: end;
-	justify-self: center;
-	font-weight: 500;
-	font-size: 14px;
-	a {
-		padding: 0 0 20px;
-		&:hover{
+	.love {
+		padding-top: 30px;
+		font-weight: 500;
+		font-size: 14px;
+		text-align: center;
+		a {
+			padding: 0 0 20px;
+			&:hover{
+				color: #FF681D;
+			}
+		}
+		.material-icons {
 			color: #FF681D;
+			font-size: 16px;
+			animation: heartbeat 3s infinite;
 		}
 	}
-	.material-icons {
-		color: #FF681D;
-		font-size: 16px;
-		animation: heartbeat 3s infinite;
+	.notice {
+		width: 70%;
+		margin: 0 auto;
+		border: 2px solid #c4d5ef;
+		border-radius: 8px;
+		padding: 8px;
+		text-align: center;
+		font-size: 14px;
+	}
+}
+
+// *****************Media Queries for Responsive Layout
+
+@media (max-width: 576px) {
+	.search-corner {
+		width: 80%;
+		padding-top: 30%;
+		.search-box {
+			input, button {
+				font-size: 18px;
+			}
+		}
+		p > a {
+			font-size: 14px;
+		}
+	}
+
+	footer {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 321px) {
+	.search-corner {
+		width: 90%;
+		p > a {
+			font-size: 12px;
+		}
+	}
+}
+
+
+//Alternate layout using CSS Grid for the browsers that supports it.
+@supports (display: grid) {
+	body {
+		display: grid;
+		grid-template-columns: 1fr 2fr 1fr;
+		grid-template-rows: 1fr auto;
+	}
+
+	.search-corner {
+		grid-column: 2;
+		align-self: center;
+		justify-self: center;
+		width: 90%;
+		padding-top: 0;
+	}
+
+	footer {
+		grid-column: 2;
+		align-self: end;
+		justify-self: center;
+		.notice {
+			display: none;
+		}
+	}
+
+	@media (max-width: 921px) {
+		body {
+			grid-template-columns: 0.2fr 1fr 0.2fr;
+		}
+	}
+
+	@media (max-width: 576px) {
+		body {
+			grid-template-columns: 0 1fr 0;
+		}
 	}
 }
 
